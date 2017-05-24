@@ -2,34 +2,29 @@ package br.com.ps.lugares;
 
 public class Mudanca {
 
-	private Lugar from;
+	final Pair<Lugar, Lugar> movementacao;
 
-	private Lugar to;
+	private final String name;
 
-	private String name;
+	private final String ci;
 
-	public Lugar getFrom() {
-		return from;
-	}
+	public Mudanca(Lugar from, Lugar to, String name, String ci) {
+		movementacao = new Pair<Lugar, Lugar>(from, to);
 
-	public void setFrom(Lugar from) {
-		this.from = from;
-	}
-
-	public Lugar getTo() {
-		return to;
-	}
-
-	public void setTo(Lugar to) {
-		this.to = to;
+		this.name = name;
+		this.ci = ci;
 	}
 
 	public String getName() {
 		return name;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public Pair<Lugar, Lugar> getMovementacao() {
+		return movementacao;
+	}
+
+	public String getCi() {
+		return ci;
 	}
 
 }
